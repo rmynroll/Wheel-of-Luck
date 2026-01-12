@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Luck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Wheel of Luck</h1>
+            <p>Şansını Dene</p>
+        </header>
+
+        <main class="game-area">
+            <div class="wheel-container">
+                <canvas id="wheelCanvas" width="500" height="500"></canvas>
+                <div class="pointer"></div>
+            </div>
+
+            <div class="controls">
+                <div class="input-group">
+                    <label for="choicesInput">Seçenekler (Her satıra bir tane)</label>
+                    <textarea id="choicesInput" placeholder="Seçenek 1&#10;Seçenek 2&#10;Seçenek 3">Pizza
+Hamburger
+Sushi
+Salata
+Kebap</textarea>
+                </div>
+                <div class="button-group">
+                    <button id="updateBtn" class="btn secondary">Güncelle</button>
+                    <button id="spinBtn" class="btn primary">ÇEVİR</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="winnerModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Kazanan!</h2>
+            <div id="winnerText" class="winner-text"></div>
+            <button id="closeModalBtn" class="btn primary">Tamam</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
